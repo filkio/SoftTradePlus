@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SimpleInjector" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SoftTradePlus.Bll\SoftTradePlus.Bll.csproj" />
+    <ProjectReference Include="..\SoftTradePlus.Data.Sql\SoftTradePlus.Data.Sql.csproj" />
+    <ProjectReference Include="..\SoftTradePlus.DI\SoftTradePlus.DI.csproj" />
+  </ItemGroup>
+
+</Project>
