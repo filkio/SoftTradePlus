@@ -37,7 +37,7 @@ namespace SoftTradePlus.Data.Sql
                 db.SaveChanges();
             }
         }
-        public IEnumerable<IManager> GetManagers()
+        public IEnumerable<IManager> GetAll()
         {
             using (var db = new SoftTradePlusContext())
             {

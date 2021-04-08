@@ -9,5 +9,6 @@ namespace SoftTradePlus.DI
         void Create(T item);
         void Update(T item, int id);
         void Delete(int id);
+        IEnumerable<T> GetAll();
     }
 }

@@ -40,7 +40,7 @@ namespace SoftTradePlus.Data.Sql
                 db.SaveChanges();
             }
         }
-        public IEnumerable<IClient> GetClients()
+        public IEnumerable<IClient> GetAll()
         {
             using (var db = new SoftTradePlusContext())
             {

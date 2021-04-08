@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 using SoftTradePlus.DI;
+using System.Linq;
 
 namespace SoftTradePlus.Data.Sql
 {
@@ -10,7 +12,11 @@ namespace SoftTradePlus.Data.Sql
         public int Id { get; set; }
         public string Name { get; set; }
         public ClientStatus Status { get; set; }
+        public ManagerEntity MyManager { get; set; }
+        public IEnumerable<GoodEntity> MyPurchasedGoods { get; set; }
+        [NotMapped]
         public IManager Manager { get; set; }
+        [NotMapped]
         public IEnumerable<IGood> PurchasedGoods { get; set; }
         public ClientEntity()
         {
@@ -20,8 +26,10 @@ namespace SoftTradePlus.Data.Sql
             Id = 0;
             Name = client.Name;
             Status = client.Status;
-            Manager = client.Manager;
-            PurchasedGoods = client.PurchasedGoods;
+            MyManager = (ManagerEntity)client.Manager;
+            MyPurchasedGoods = (IEnumerable<GoodEntity>)client.PurchasedGoods;
+           // Manager = client.Manager;
+           // PurchasedGoods = client.PurchasedGoods;
         }
     }
 }

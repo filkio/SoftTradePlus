@@ -21,9 +21,11 @@ namespace SoftTradePlus.Setting
             Container.Register<IClient, Client>(Lifestyle.Transient);
             Container.Register<IGood, Good>(Lifestyle.Transient);
             Container.Register<IManager, Manager>(Lifestyle.Transient);
+            Container.Register<ICompany, Company>(Lifestyle.Singleton);
             Container.Register<IData<IClient>, ClientSqlData>(Lifestyle.Singleton);
             Container.Register<IData<IGood>, GoodSqlData>(Lifestyle.Singleton);
             Container.Register<IData<IManager>, ManagerSqlData>(Lifestyle.Singleton);
+            Container.Register<ISpecifiedData, SpecifiedSqlData>(Lifestyle.Singleton);
         }
     }
 }

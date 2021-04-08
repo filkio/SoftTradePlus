@@ -40,7 +40,7 @@ namespace SoftTradePlus.Data.Sql
                 db.SaveChanges();
             }
         }
-        public IEnumerable<IGood> GetGoods()
+        public IEnumerable<IGood> GetAll()
         {
             using (var db = new SoftTradePlusContext())
             {
