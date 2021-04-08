@@ -20,7 +20,7 @@ namespace SoftTradePlus.Data.Sql
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=SoftTradePlusDb;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-C6994HF\SQLEXPRESS;Database=SoftTradePlusDb;Trusted_Connection=True;");
         }
     }
 }

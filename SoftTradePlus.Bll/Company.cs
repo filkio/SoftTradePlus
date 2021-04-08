@@ -11,11 +11,12 @@ namespace SoftTradePlus.Bll
         private readonly IData<IGood> _goodData;
         private readonly IData<IClient> _clientData;
         private readonly ISpecifiedData _specifiedData;
-        public Company(IData<IManager> managerData, IData<IGood> goodData, IData<IClient> clientData)
+        public Company(IData<IManager> managerData, IData<IGood> goodData, IData<IClient> clientData, ISpecifiedData specifiedData)
         {
             _managerData = managerData;
             _goodData = goodData;
             _clientData = clientData;
+            _specifiedData = specifiedData;
         }
 
 
