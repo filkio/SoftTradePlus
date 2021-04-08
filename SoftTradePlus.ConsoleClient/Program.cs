@@ -2,6 +2,8 @@
 using SoftTradePlus.Setting;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using SoftTradePlus.Data.Sql;
 
 namespace SoftTradePlus.ConsoleClient
 {
@@ -27,7 +29,9 @@ namespace SoftTradePlus.ConsoleClient
         static void Main(string[] args)
         {
             _configuration = new Configuration();
-            CreateClient("test", ClientStatus.key, null, null);
+            var company = _configuration.Container.GetInstance<ICompany>();
+            IManager manager = company.GetManagers().FirstOrDefault();
+            CreateClient("test", ClientStatus.key, manager, null);
             Console.WriteLine("ok!");
         }
     }

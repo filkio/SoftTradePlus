@@ -41,7 +41,7 @@ namespace SoftTradePlus.Data.Sql
         {
             using (var db = new SoftTradePlusContext())
             {
-                var managers = db.Managers;
+                var managers = db.Managers.ToList();
                 return managers;
             }
         }
